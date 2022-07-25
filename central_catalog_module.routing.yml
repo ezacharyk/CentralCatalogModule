@@ -1,0 +1,92 @@
+central_catalog_module.page:
+  path: '/admin/central_catalog/cc_page'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::ccpage'
+    _title: 'Manage Central Catalog'
+  requirements:
+    _permission: 'access central_catalog page'
+
+central_catalog_module.cc_form:
+  path: '/admin/central_catalog/cc_form'
+  defaults:
+    _form:  '\Drupal\central_catalog_module\Form\CCForm'
+    _title: 'Central Catalog Form'
+  requirements:
+    _permission: 'access central_catalog page'
+    
+########## ########## ########## ##########
+##########  Set User Activities  ##########
+########## ########## ########## ##########
+
+# central_catalog_module.cc_action:
+  # path: 'api/cc_action'
+  # defaults:
+    # _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::get_cc_action'
+  # methods: [GET]
+  # requirements:
+    # _access: 'TRUE'
+    
+central_catalog_module.cc_add_term:
+  path: 'api/cc_add_term'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_add_term'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_edit_term:
+  path: 'api/cc_edit_term'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_edit_term'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+central_catalog_module.cc_delete_term:
+  path: 'api/cc_delete_term'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_delete_term'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_order_term:
+  path: 'api/cc_order_term'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_order_term'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_add_taxonomy:
+  path: 'api/cc_add_taxonomy'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_add_taxonomy'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_edit_taxonomy:
+  path: 'api/cc_edit_taxonomy'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_edit_taxonomy'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_delete_taxonomy:
+  path: 'api/cc_delete_taxonomy'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_delete_taxonomy'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    
+central_catalog_module.cc_order_taxonomy:
+  path: 'api/cc_order_taxonomy'
+  defaults:
+    _controller: '\Drupal\central_catalog_module\Controller\CentralCatalogController::set_cc_order_taxonomy'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+    

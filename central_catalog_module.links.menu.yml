@@ -1,0 +1,8 @@
+central_catalog_module.cc_form:
+  title: Central Catalog
+  description: 'Administer Central Catalog Terms'
+  route_name: central_catalog_module.cc_form
+  parent: system.admin_config
+  
+# We can't define a menu link for the page_example_arguments route, because it
+# requires path arguments.
